@@ -8,16 +8,16 @@ void sleep_10us(unsigned int count) {
 }
 
 void main(void) {
-  char led = 1;
-  char target;
-  P2 = 0xFE;
+  char temp;
+  P2 = 0xFF;
   while(1) {
-    if (led == 8) {
-      led = 0;
+    if (P3_1 == 0) {
+      sleep_10us(1000);
+      while (P3_1 == 0);
+      sleep_10us(1000);
+      temp = ~P2;
+      temp ++;
+      P2 = ~temp;
     }
-    target = ~(1 << led);
-    led++;
-    P2 = target;
-    sleep_10us(5000);
   }
 }
