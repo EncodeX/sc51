@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxs": "javascript",
+        "*.wxss": "css",
+        "8052.h": "c",
+        "8051.h": "c",
+        "lint.h": "c",
+        "compiler.h": "c",
+        "reg51.h": "c"
+    }
+}
